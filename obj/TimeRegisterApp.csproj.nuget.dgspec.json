@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TimeRegister\\TimeRegisterApp\\TimeRegisterApp.csproj": {}
+    "D:\\Videos\\TR\\TimeRegisterApp.csproj": {}
   },
   "projects": {
-    "D:\\TimeRegister\\TimeRegisterApp\\TimeRegisterApp.csproj": {
+    "D:\\Videos\\TR\\TimeRegisterApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TimeRegister\\TimeRegisterApp\\TimeRegisterApp.csproj",
+        "projectUniqueName": "D:\\Videos\\TR\\TimeRegisterApp.csproj",
         "projectName": "TimeRegisterApp",
-        "projectPath": "D:\\TimeRegister\\TimeRegisterApp\\TimeRegisterApp.csproj",
+        "projectPath": "D:\\Videos\\TR\\TimeRegisterApp.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\TimeRegister\\TimeRegisterApp\\obj\\",
+        "outputPath": "D:\\Videos\\TR\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
