@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "AddProject";
+}
+@model TimeRegisterApp.Models.Project
+
+<h1>@ViewData["Title"]</h1>
+
+
+<form asp-action="AddProject">
+    <div class="form-group">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <label asp-for="Name" class="control-label">Please add name of project</label>
+        <span asp-validation-for="Name"></span>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <button name="button" asp-action="AddProject" class="btn btn-success">Add project</button>
+</form>
+
+
+<div>@TempData["value"]</div>
+
+
+
+
+
+@section scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

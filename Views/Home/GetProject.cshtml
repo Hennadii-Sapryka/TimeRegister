@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Project>
+@{
+    ViewData["Title"] = "GetProject";
+}
+
+<h5>This page contains info about project.</h5>
+
+<p>My list of projects</p>
+
+<form asp-action="Count">
+    <table>
+        <thead>
+            <tr>
+                <th>Last spent time |</th>
+                <th>id |</th>
+                <th>Name of project |</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.SpentTime.Duration</td>
+                <td>@item.SpentTime.Id</td>
+                <td>@item.Name</td>
+                <td>
+                    <button name="button"
+                            class="btn btn-outline-success btn-sm"
+                            asp-action="Index"
+                            asp-route-id="@item.Id">
+                        Let`s start working
+                    </button>
+                </td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</form>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Checkpoint>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form>
+        @if (Model != null)
+        {
+            <div>
+                <p>Current project ID | @Model.Select(c => c.ProjectId).FirstOrDefault()</p>
+                <p>Current progress time | @Model.Select(c => c.MarkedTime).Last()</p>
+            </div>
+
+            <button name="button" class="btn btn-outline-success btn-sm" value="Start" asp-action="Count" asp-route-id="@Model.Select(c=>c.ProjectId).FirstOrDefault()">START</button>
+            <button name="button" class="btn btn-outline-danger btn-sm" value="Stop" asp-action="Count" asp-route-id="@Model.Select(c=>c.ProjectId).FirstOrDefault()">STOP</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>All-time spent |</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MarkedTime</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h1 class="display-4">Welcome</h1>
+            <p>Hello <a href="https://docs.microsoft.com/aspnet/core">Before working you should add or chose your project</a>.</p>
+        }
+    </form>
+</div>
